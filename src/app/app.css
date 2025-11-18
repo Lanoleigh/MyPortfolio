@@ -1,0 +1,326 @@
+@keyframes floatAround {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(40vw, -20vh);
+  }
+  50% {
+    transform: translate(-20vw, 30vh);
+  }
+  75% {
+    transform: translate(25vw, 10vh);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+
+.ball-background{
+position: absolute !important;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.ball {
+  position: absolute;
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 50%;
+  animation: floatAround 25s linear infinite;
+  opacity: 0.7;
+  filter: blur(3px);
+}
+
+
+.ball:nth-child(odd) {
+    color: #2fec00;
+}
+
+.ball:nth-child(even) {
+    color: #0f5c00;
+}
+
+
+.ball:nth-child(1) {
+  top: 77%;
+  left: 88%;
+  animation-duration: 40s;
+  animation-delay: -3s;
+  transform-origin: 16vw -2vh;
+  box-shadow: 40vmin 0 5.703076368487546vmin currentColor;
+}
+.ball:nth-child(2) {
+  top: 42%;
+  left: 2%;
+  animation-duration: 53s;
+  animation-delay: -29s;
+  transform-origin: -19vw 21vh;
+  box-shadow: -40vmin 0 5.17594621519026vmin currentColor;
+}
+.ball:nth-child(3) {
+  top: 28%;
+  left: 18%;
+  animation-duration: 49s;
+  animation-delay: -8s;
+  transform-origin: -22vw 3vh;
+  box-shadow: 40vmin 0 5.248179047256236vmin currentColor;
+}
+.ball:nth-child(4) {
+  top: 50%;
+  left: 79%;
+  animation-duration: 26s;
+  animation-delay: -21s;
+  transform-origin: -17vw -6vh;
+  box-shadow: 40vmin 0 5.279749632220298vmin currentColor;
+}
+.ball:nth-child(5) {
+  top: 46%;
+  left: 15%;
+  animation-duration: 36s;
+  animation-delay: -40s;
+  transform-origin: 4vw 0vh;
+  box-shadow: -40vmin 0 5.964309466052033vmin currentColor;
+}
+.ball:nth-child(6) {
+  top: 77%;
+  left: 16%;
+  animation-duration: 31s;
+  animation-delay: -10s;
+  transform-origin: 18vw 4vh;
+  box-shadow: 40vmin 0 5.178483653434181vmin currentColor;
+}
+.ball:nth-child(7) {
+  top: 22%;
+  left: 17%;
+  animation-duration: 55s;
+  animation-delay: -6s;
+  transform-origin: 1vw -23vh;
+  box-shadow: -40vmin 0 5.703026794398318vmin currentColor;
+}
+.ball:nth-child(8) {
+  top: 41%;
+  left: 47%;
+  animation-duration: 43s;
+  animation-delay: -28s;
+  transform-origin: 25vw -3vh;
+  box-shadow: 40vmin 0 5.196265905749415vmin currentColor;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section .wave {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0c6600;
+  transition: 0.5s;
+  z-index: 0;
+}
+section .wave span {
+  content: "";
+  position: absolute;
+  width: 325vh;
+  height: 325vh;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+  z-index: 0;
+}
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 8px;
+  margin: auto;
+  width: fit-content;
+  background: transparent;
+  color: #fff;
+  text-align: center;
+  box-shadow: 0,0,0,0.5px green;
+}
+
+section .wave span:nth-child(1) {
+  border-radius: 45%;
+  background: rgb(255, 255, 255);
+  animation: animate 5s linear infinite;
+}
+
+section .wave span:nth-child(2) {
+  border-radius: 40%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 10s linear infinite;
+}
+section .wave span:nth-child(3) {
+  border-radius: 42.5%;
+  background: rgba(20, 20, 20, 0.5);
+  animation: animate 15s linear infinite;
+}
+@keyframes animate {
+  0% {
+    transform: translate(-45%, -85%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-45%, -85%) rotate(360deg);
+  }
+}
+.sec{
+    position: relative;
+    height: 100vh;
+}
+.nav-bar {
+  width: 50%;
+  padding: 10px;
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  position: absolute;    
+  bottom: 20px;           
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+              rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+
+
+.nav-bar ul{
+  list-style: none;
+  gap:30px;
+  display: flex;
+}
+.nav-bar li{
+ margin: auto;
+  color: white;
+  cursor: pointer;
+  font-size: 1.6em;
+  padding: 5px;
+  border-radius: 10px;
+}
+.nav-bar li:hover{
+    transition: ease-in-out .3s;
+   box-shadow: rgba(166, 166, 172, 0.25) 0px 30px 60px -12px inset, rgba(255, 255, 255, 0.3) 0px 18px 36px -18px inset;
+}
+.nav-bar a{
+  text-decoration: none;
+  color: white;
+}
+
+.main{
+  background-color: rgb(255, 255, 255);
+  margin: unset;
+  padding: unset;
+  display: block;
+}
+#into{
+  height: 100vh;
+}
+.heading-font{
+  align-self: center;
+  background: transparent;
+  font-size: 5em;
+}
+.sub-heading{
+  margin-top: 28px;
+  font-size: 2em;
+  align-self: center;
+}
+#abt-me{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#about-section{
+  padding:5px;
+  display: block;
+  width: 100%;
+  background-color: #ffffff;
+}
+.abt-sec{
+    position: relative!important;
+    z-index: 1;
+    width:70%;
+    background: #0c6600;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: auto;
+    
+}
+.aca-info{
+    font-size: 1.5em;
+    width: 60%;
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 16px;
+    box-shadow: 
+    0 4px 30px rgba(0, 0, 0, 0.1),   
+    inset 0 0 60px rgba(255, 255, 255, 0.25); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    color: #000000; 
+    padding:10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin: auto;
+}
+.aca-info ul{
+    list-style: none;
+    display: block;
+}
+.aca-info li{
+    list-style: none;
+    font-size: unset;
+}
+#projects-section h2{
+  margin-left: 10px;
+}
+#projects{
+    display: block;
+}
+.project-card{
+  background-color: #97fd7e;
+  padding: 10px;
+  margin-bottom: 8px;
+  max-width: 280px;
+  position: relative;
+  
+}
+.project-card:hover{
+  scale: 1.1;
+  transition: ease-in-out .2s;
+}
+.repo-link-btn{
+  width: fit-content;
+  height: fit-content;
+  padding: 7px;
+  text-decoration: none;
+  color: black;
+  border-radius: 4px;
+  background-color: #0c6600;
+}
+.repo-link-btn:hover{
+  cursor: pointer;
+  background-color: rgb(3, 102, 0);
+  transition: ease-in-out .2s;
+
+}
+
+

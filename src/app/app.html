@@ -1,51 +1,148 @@
-<style>
-
-.main{
-  background-color: darkgreen;
-  margin: unset;
-  padding: unset;
-}
-#into{
-  height: 100vh;
-}
-.heading-font{
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-#abt-me{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.abt-section{
-  width: 80%;
-  padding: 10px;
-  background-image:url("/assets/blueSplash2.png") ;
-  background-position: center;
-}
-
-
-</style>
-
 
 <main class="main">
- <section id="into">
-    <h1 class="heading-font">Zalano Poole</h1>
-    <h2 class="heading-font">Software Engineer</h2>
-<img src="/assets/blueSplash2.png" alt="test">
+      <section class="sec">
+          <div class="content">
+              <h1 class="heading-font" >Zalano Poole</h1>
+              <h2 class="sub-heading">Software Engineer</h2>
+          </div>
+          
+
+      <div class="wave">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="nav-bar">
+          <ul>
+            <li><a href="#about-section">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a>Skills</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+      </div>
+    </section>
 
 
-    <div class="abt-section">
-      <p id="abt-me" >Hi, my name is Zalano Poole. I am a software engineer at one of South Africa's most prestigious IT soultions company.
-        I built this website to showcase a fraction of my capabilities, as i aspire to learn a little bit more each day.
-      </p>
-    </div>
 
-    <a href="#different-section">This is a link to bottom of page</a>
+  <section id="about-section">
+    <h2>Get to know me</h2> 
+      <div class="ball-background">
+        <span class="ball"></span>
+        <span class="ball"></span>
+        <span class="ball"></span>
+        <span class="ball"></span>
+        <span class="ball"></span>
+        <span class="ball"></span>
+        <span class="ball"></span>
+        <span class="ball"></span>
+      </div>
 
+      <div class="abt-sec">
+        <mat-tab-group>
+            <mat-tab  label="Academia">
+              <div class="aca-info">
+                <p>I recently completed a 3 year degree in Computer and Information Science in Application Development.
+                   However I have been doing IT since Highschool grade 10. I acheived numberous distinctions throughout my 
+                   varsity tenure, to name a few: </p>
+                   <br/>
+                <ul>
+                  <li>~ Programming (from 1st year to 3rd)</li>
+                  <li>~ Information Systems (IT Project Management)</li>
+                  <li>~ Cloud Development</li>
+                  <li>~ Open Source Programming (Android App Development)</li>
+                </ul>
+              </div>
+            </mat-tab>
+            <mat-tab  label="Personal">
+              <p>This will be my personal info</p>
+            </mat-tab>
+        </mat-tab-group>
+          
+      </div>
+  </section>
+
+
+
+<section id="projects">
+  <mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>
+      <mat-card class="project-card">
+    <mat-card-header>
+      LetsLink Mobile App
+    </mat-card-header>
+    <mat-card-content>
+      <p>Descption</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a class="repo-link-btn" href="">
+        View Repository
+      </a>
+    </mat-card-actions>
+  </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+  <mat-card class="project-card">
+    <mat-card-header>
+      LetsLink Mobile App
+    </mat-card-header>
+    <mat-card-content>
+      <p>Descption</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a class="repo-link-btn" href="">
+        View Repository
+      </a>
+    </mat-card-actions>
+  </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+  <mat-card class="project-card">
+    <mat-card-header>
+      LetsLink Mobile App
+    </mat-card-header>
+    <mat-card-content>
+      <p>Descption</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a class="repo-link-btn" href="">
+        View Repository
+      </a>
+    </mat-card-actions>
+  </mat-card>
+  </mat-grid-tile>
+  <mat-grid-tile>
+  <mat-card class="project-card">
+    <mat-card-header>
+      LetsLink Mobile App
+    </mat-card-header>
+    <mat-card-content>
+      <p>Descption</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a class="repo-link-btn" href="">
+        View Repository
+      </a>
+    </mat-card-actions>
+  </mat-card>
+  </mat-grid-tile>
+</mat-grid-list>
+  <h2>Projects</h2>
+  <mat-card class="project-card">
+    <mat-card-header>
+      LetsLink Mobile App
+    </mat-card-header>
+    <mat-card-content>
+      <p>Descption</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <a class="repo-link-btn" href="">
+        View Repository
+      </a>
+    </mat-card-actions>
+  </mat-card>
 </section>
 
 
-  <section id="different-section">
-    <h2>Woah this is a new world</h2>
-  </section>
 </main>
 
 
