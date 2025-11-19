@@ -1,0 +1,125 @@
+<mat-grid-list cols="3" rowHeight="200px" gutterSize="19px">
+  @for (tile of tiles; track tile) {
+    <mat-grid-tile 
+      [colspan]="tile.cols"
+      [rowspan]="tile.rows"
+
+      class="tile-shadow">
+      @if(tile.text == "Skills"){
+        <div class="skills-container">
+          <h2>Tech Stack</h2>
+          <h3>Backend & Database</h3>
+          <mat-chip-set arial-label="Backend & Database">
+            <mat-chip>Java</mat-chip>
+            <mat-chip>C#</mat-chip>
+            <mat-chip>Kotlin</mat-chip>
+            <mat-chip>NodeJS</mat-chip>
+            <mat-chip>SQL/PL</mat-chip>
+          </mat-chip-set>
+          <h3>Web Development</h3>
+          <mat-chip-set arial-label="Web Development and DevOps Tools">
+            <mat-chip>ASP.NET</mat-chip>
+            <mat-chip>Angular</mat-chip>
+            <mat-chip>HTML/CSS</mat-chip>
+            <mat-chip>JavaScript</mat-chip>
+            <mat-chip>Azure DevOps</mat-chip>
+          </mat-chip-set>
+
+        </div>
+      }@else{ 
+        <div class="else-option">
+             <img [src]="tile.imgOfProject" alt="Didnt work" class="imgStyle"/>
+          <div class="tile-content">
+          <div class="description" >
+            <h2>{{ tile.text }}</h2>
+            <p>{{tile.description}}</p>
+              <a class="linkToRepo" target="_blank" href="{{tile.linkToRepo}}">View In Repository</a>
+          </div>
+        
+      </div>
+        </div>
+      
+     
+      }
+  
+     
+    </mat-grid-tile>
+  }
+</mat-grid-list>
+
+<style>
+  .else-option{
+    display: flex;
+    background-color: #0c6600;
+    padding: 6px;
+    border-radius: 12px;
+    box-shadow: 1px 1px 10px 3px #676967 ;
+  }
+  .tile-shadow{
+    border-radius: 19px;
+  box-shadow: 
+    0 4px 30px rgba(0, 0, 0, 0.1),   
+    inset 0 0 60px rgba(255, 255, 255, 0.25); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+  }
+  .description{
+    padding:5px;
+    background: #0c6600;
+    border-radius: 10px;
+  }
+.linkToRepo{
+  width: fit-content;
+  height: fit-content;
+  padding: 7px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+  background-color: #0c6600;
+  float: right;
+}
+.linkToRepo:hover{
+  background:none;
+    box-shadow: 
+    0 4px 30px rgba(0, 0, 0, 0.1),   
+    inset 0 0 60px rgba(255, 255, 255, 0.25); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+.skills-container{
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px;
+  text-align: left;
+}
+.skills-container mat-chip{
+  background: white;
+  border: none;
+}
+.skills-container mat-chip:hover{
+    cursor: pointer;
+  background:transparent ;
+  transition: ease-in-out .2s;
+  scale: 1.1;
+
+}
+.tile-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  padding: 9px;
+}
+.imgStyle{
+  margin: auto;
+  border-radius: 50%;
+  width:80px;
+  height:80px;
+  padding:10px;
+}
+</style>

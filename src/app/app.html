@@ -15,9 +15,8 @@
       <div class="nav-bar">
           <ul>
             <li><a href="#about-section">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a>Skills</a></li>
-            <li><a>Contact</a></li>
+            <li><a href="#projects">Projects and Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
       </div>
     </section>
@@ -25,19 +24,15 @@
 
 
   <section id="about-section">
-    <h2>Get to know me</h2> 
-      <div class="ball-background">
-        <span class="ball"></span>
-        <span class="ball"></span>
-        <span class="ball"></span>
-        <span class="ball"></span>
-        <span class="ball"></span>
-        <span class="ball"></span>
-        <span class="ball"></span>
-        <span class="ball"></span>
+    
+      <div class="abt-wave">
+        <span></span>
+        <span></span>
+        <span></span>
       </div>
-
+      <h2 class="abt-head">About Me</h2> 
       <div class="abt-sec">
+        
         <mat-tab-group>
             <mat-tab  label="Academia">
               <div class="aca-info">
@@ -54,7 +49,15 @@
               </div>
             </mat-tab>
             <mat-tab  label="Personal">
-              <p>This will be my personal info</p>
+              <div class="aca-info">
+              <p>
+                I grew up believing I would make a career out of one of the sports I was good at, as soon as that dream ended another one blossomed. 
+                Building meaningful, purposeful software.However I do believe that the competitive nature of the sports I participated in did instil the competitive nature within myself against myself.
+                That could be a reason I believe in the Japanese word "Kaizen", which means improvement.
+                 Always striving to do better in a personal and professional capacity.
+              </p>
+              </div>
+
             </mat-tab>
         </mat-tab-group>
           
@@ -64,82 +67,51 @@
 
 
 <section id="projects">
-  <mat-grid-list cols="2" rowHeight="2:1">
-  <mat-grid-tile>
-      <mat-card class="project-card">
-    <mat-card-header>
-      LetsLink Mobile App
-    </mat-card-header>
-    <mat-card-content>
-      <p>Descption</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <a class="repo-link-btn" href="">
-        View Repository
-      </a>
-    </mat-card-actions>
-  </mat-card>
-  </mat-grid-tile>
-  <mat-grid-tile>
-  <mat-card class="project-card">
-    <mat-card-header>
-      LetsLink Mobile App
-    </mat-card-header>
-    <mat-card-content>
-      <p>Descption</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <a class="repo-link-btn" href="">
-        View Repository
-      </a>
-    </mat-card-actions>
-  </mat-card>
-  </mat-grid-tile>
-  <mat-grid-tile>
-  <mat-card class="project-card">
-    <mat-card-header>
-      LetsLink Mobile App
-    </mat-card-header>
-    <mat-card-content>
-      <p>Descption</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <a class="repo-link-btn" href="">
-        View Repository
-      </a>
-    </mat-card-actions>
-  </mat-card>
-  </mat-grid-tile>
-  <mat-grid-tile>
-  <mat-card class="project-card">
-    <mat-card-header>
-      LetsLink Mobile App
-    </mat-card-header>
-    <mat-card-content>
-      <p>Descption</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <a class="repo-link-btn" href="">
-        View Repository
-      </a>
-    </mat-card-actions>
-  </mat-card>
-  </mat-grid-tile>
-</mat-grid-list>
-  <h2>Projects</h2>
-  <mat-card class="project-card">
-    <mat-card-header>
-      LetsLink Mobile App
-    </mat-card-header>
-    <mat-card-content>
-      <p>Descption</p>
-    </mat-card-content>
-    <mat-card-actions>
-      <a class="repo-link-btn" href="">
-        View Repository
-      </a>
-    </mat-card-actions>
-  </mat-card>
+
+    
+      <div class="pro-wave">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+
+
+<div class="pro-divider">
+  <h1>Projects</h1>
+
+  <grid-list-dynamic></grid-list-dynamic>
+</div>
+
+
+</section>
+<section id="contact">
+  <h1>Contact Me</h1>
+      <div class="con-wave">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+<div class="contact-frm-container">
+  <form class="frm" action="https://formsubmit.co/zalano16p@gmail.com" method="POST">
+      <label>Name</label>
+      <input placeholder="Name" name="name" required>
+
+      <label>Email</label>
+      <input placeholder="Email Address"  type="email" name="email" required>
+
+
+      <label>Let me know what's on your mind</label>
+      <textarea placeholder="" name="message" rows="5" required></textarea>
+      <br>
+
+    <button mat-raised-button color="primary" type="submit">Send</button>
+
+  </form>
+</div>
+
+
 </section>
 
 
