@@ -3,9 +3,8 @@ import { RouterOutlet } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule} from '@angular/material/tabs';
 import { GridListDynamic } from './grid-list-dynamic.component';
-import { MatFormField } from '@angular/material/form-field';
-import { MatLabel } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input'; 
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-root',
@@ -15,11 +14,21 @@ import { MatInputModule } from '@angular/material/input';
     MatCardModule,
     MatTabsModule,
     GridListDynamic,
-    MatFormField,
-    MatLabel,
-    MatInputModule
+    MatInputModule,
+    MatSlideToggleModule
 ],
   templateUrl: './app.html',
   styleUrls: ['./app.css']
 })
-export class App {}
+export class App {
+
+
+  toggleTheme(event:any){
+    const isAlt = event.checked;
+    if(isAlt){
+      document.body.classList.add('alt-theme');
+    }else{
+      document.body.classList.remove('alt-theme')
+    }
+  }
+}

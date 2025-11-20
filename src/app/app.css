@@ -1,114 +1,3 @@
-@keyframes floatAround {
-  0% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(40vw, -20vh);
-  }
-  50% {
-    transform: translate(-20vw, 30vh);
-  }
-  75% {
-    transform: translate(25vw, 10vh);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
-}
-
-
-.ball-background{
-position: absolute !important;
-  width: 100vw;
-  height: 100vh;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.ball {
-  position: absolute;
-  width: 20vmin;
-  height: 20vmin;
-  border-radius: 50%;
-  animation: floatAround 25s linear infinite;
-  opacity: 0.7;
-  filter: blur(3px);
-}
-
-
-.ball:nth-child(odd) {
-    color: #2fec00;
-}
-
-.ball:nth-child(even) {
-    color: #0f5c00;
-}
-
-
-.ball:nth-child(1) {
-  top: 77%;
-  left: 88%;
-  animation-duration: 40s;
-  animation-delay: -3s;
-  transform-origin: 16vw -2vh;
-  box-shadow: 40vmin 0 5.703076368487546vmin currentColor;
-}
-.ball:nth-child(2) {
-  top: 42%;
-  left: 2%;
-  animation-duration: 53s;
-  animation-delay: -29s;
-  transform-origin: -19vw 21vh;
-  box-shadow: -40vmin 0 5.17594621519026vmin currentColor;
-}
-.ball:nth-child(3) {
-  top: 28%;
-  left: 18%;
-  animation-duration: 49s;
-  animation-delay: -8s;
-  transform-origin: -22vw 3vh;
-  box-shadow: 40vmin 0 5.248179047256236vmin currentColor;
-}
-.ball:nth-child(4) {
-  top: 50%;
-  left: 79%;
-  animation-duration: 26s;
-  animation-delay: -21s;
-  transform-origin: -17vw -6vh;
-  box-shadow: 40vmin 0 5.279749632220298vmin currentColor;
-}
-.ball:nth-child(5) {
-  top: 46%;
-  left: 15%;
-  animation-duration: 36s;
-  animation-delay: -40s;
-  transform-origin: 4vw 0vh;
-  box-shadow: -40vmin 0 5.964309466052033vmin currentColor;
-}
-.ball:nth-child(6) {
-  top: 77%;
-  left: 16%;
-  animation-duration: 31s;
-  animation-delay: -10s;
-  transform-origin: 18vw 4vh;
-  box-shadow: 40vmin 0 5.178483653434181vmin currentColor;
-}
-.ball:nth-child(7) {
-  top: 22%;
-  left: 17%;
-  animation-duration: 55s;
-  animation-delay: -6s;
-  transform-origin: 1vw -23vh;
-  box-shadow: -40vmin 0 5.703026794398318vmin currentColor;
-}
-.ball:nth-child(8) {
-  top: 41%;
-  left: 47%;
-  animation-duration: 43s;
-  animation-delay: -28s;
-  transform-origin: 25vw -3vh;
-  box-shadow: 40vmin 0 5.196265905749415vmin currentColor;
-}
 
 @import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
 * {
@@ -117,6 +6,17 @@ position: absolute !important;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+
+.mdc-switch.mdc-switch--selected .mdc-switch__track {
+  background-color: var(--wave-color) !important;
+}
+
+.mdc-switch.mdc-switch--selected .mdc-switch__handle {
+  background-color: var(--wave-color) !important;
+}
+
+
 section {
   position: relative;
   width: 100%;
@@ -131,7 +31,7 @@ section .wave {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #0c6600;
+  background: var(--wave-color);
   transition: 0.5s;
   z-index: 0;
 }
@@ -296,7 +196,7 @@ section .abt-wave span:nth-child(2) {
 }
 section .abt-wave span:nth-child(3) {
   border-radius: 42.5%;
-  background:#0c6600;
+  background: var(--wave-color);
   animation: animate 10s linear infinite;
 }
 
@@ -322,7 +222,7 @@ section .abt-wave span:nth-child(3) {
   font-size: 4em;
   font-family: "Poppins", sans-serif;
   color:white;
-   text-shadow: 1px 2px 10px #069b01;
+   text-shadow: 1px 2px 10px var(--wave-color);;
    justify-self: center;
    align-self: center;
   z-index: 3;
@@ -333,7 +233,7 @@ section .abt-wave span:nth-child(3) {
 .aca-info{
     font-weight: 400;
     width: 60%;
-    background: rgba(79, 151, 85, 0.7); 
+    background: var(--wave-color); 
     border-radius: 16px;
     color: #fffdfd; 
     padding:30px;
@@ -388,7 +288,7 @@ section .pro-wave span:nth-child(1) {
 
 section .pro-wave span:nth-child(2) {
   border-radius: 40%;
-  background:#069b01;
+  background: var(--wave-color);;
   opacity: .4;
   animation: animate 9s linear infinite;
 }
@@ -409,7 +309,7 @@ section .pro-wave span:nth-child(3) {
   font-size: 4em;
   color:rgb(255, 255, 255);
   z-index: 3;
-  text-shadow: 1px 2px 10px #069b01;
+  text-shadow: 1px 2px 10px var(--wave-color);
 }
 
 /*contact me*/
@@ -422,7 +322,7 @@ section .pro-wave span:nth-child(3) {
   position: relative;
   color: white;
   margin-top: 8%;
-  text-shadow: 1px 2px 10px #069b01;
+  text-shadow: 1px 2px 10px  var(--wave-color);;
   justify-self: center;
   font-size: 4em;
 }
@@ -453,7 +353,7 @@ section .con-wave span:nth-child(1) {
 
 section .con-wave span:nth-child(2) {
   border-radius: 40%;
-  background:#069b01;
+  background: var(--wave-color);;
   opacity: .4;
   animation: animate 9s linear infinite;
 }
@@ -465,7 +365,7 @@ section .con-wave span:nth-child(3) {
 .contact-frm-container{
           box-shadow: 
     0 4px 40px rgba(0, 0, 0, 0.1),   
-    inset 0 0 70px rgba(0, 141, 12, 0.493); 
+    inset 0 0 70px var(--wave-color); 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); 
     width: 60%;
@@ -488,7 +388,7 @@ section .con-wave span:nth-child(3) {
 }
 .frm input:focus{
   border: none;
-  box-shadow: 1px 2px 9px 2px inset #64ee5f;
+  box-shadow: 1px 2px 9px 2px inset var(--wave-color);
 }
 .frm label{
   color:white;
@@ -502,7 +402,7 @@ section .con-wave span:nth-child(3) {
 }
 .frm textarea:focus{
   border: none!important;
-  box-shadow: 1px 2px 5px 2px inset #64ee5f;
+  box-shadow: 1px 2px 5px 2px inset var(--wave-color);
 }
 .frm button{
   padding:8px;
@@ -510,13 +410,13 @@ section .con-wave span:nth-child(3) {
   border-radius: 10px;
         box-shadow: 
     0 4px 40px rgba(0, 0, 0, 0.1),   
-    inset 0 0 70px rgba(0, 141, 12, 0.493); 
+    inset 0 0 70px var(--wave-color); 
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px); 
 }
 .frm button:hover{
   transition: ease-in-out .2s;
-  background-color: #0c6600;
+  background-color:  var(--wave-color);
   cursor: pointer;
 }
 

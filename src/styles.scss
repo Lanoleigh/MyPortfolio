@@ -1,0 +1,33 @@
+@use '@angular/material' as mat;
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+:root{
+    --wave-color: #0c6600;
+    @include mat.slide-toggle-overrides((
+        selected-focus-track-color:#b68d08 ,
+        selected-focus-handle-color: var(--wave-color),
+        disabled-selected-icon-color: var(--wave-color),
+        selected-icon-color: white,
+        selected-pressed-state-layer-color: var(--wave-color),
+        selected-track-color: #b68d08,
+        selected-hover-track-color: white,
+        selected-pressed-handle-color: var(--wave-color),
+        selected-pressed-track-color: var(--wave-color),
+        selected-hover-state-layer-color: var(--wave-color),
+        selected-hover-handle-color: #b68d08,
+        unselected-focus-track-color: var(--wave-color),
+        unselected-track-color: var(--wave-color)
+
+
+    ));
+    @include mat.tabs-overrides((
+        active-focus-indicator-color: var(--wave-color),
+        active-focus-label-text-color: white,
+        active-indicator-color: var(--wave-color),
+        active-label-text-color: white
+    ));
+}
+
+.alt-theme{
+    --wave-color: #b68d08;
+}
